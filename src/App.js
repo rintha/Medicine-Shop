@@ -1,17 +1,19 @@
-import React from "react";
-import "./App.css"
+import React, { useState } from "react";
 import AddMedicine from "./components/AddMedicine";
 import NavBar from "./components/Header/NavBar";
+import Medicine from "./components/Medicine";
+import CartProvider from "./store/CartProvider";
 
 function App() {
+  const [medicines, setMedicines] = useState([]);
   return (
-    <>
-    <section><NavBar /></section>
-      
+    <CartProvider>
+      <NavBar />
       <section>
-        <AddMedicine />
+        <AddMedicine setMedicines={setMedicines} />
       </section>
-    </>
+      <Medicine medicines={medicines} />
+    </CartProvider>
   );
 }
 

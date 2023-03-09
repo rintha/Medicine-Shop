@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container } from "react-bootstrap";
-import HeaderCartBuitton from "./HeaderCartBuitton";
+import Cart from "../Cart/Cart";
 
 const NavBar = () => {
   return (
@@ -8,7 +8,7 @@ const NavBar = () => {
       <Navbar bg="light">
         <Container>
           <Navbar.Brand>Ashoka Medicals</Navbar.Brand>
-          <HeaderCartBuitton />
+          <Cart />
         </Container>
       </Navbar>
     </>
