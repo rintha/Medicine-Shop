@@ -1,9 +1,16 @@
 import React from "react";
+import "./App.css"
+import AddMedicine from "./components/AddMedicine";
+import NavBar from "./components/Header/NavBar";
 
 function App() {
   return (
     <>
-      <p>Medicine shop</p>
+    <section><NavBar /></section>
+      
+      <section>
+        <AddMedicine />
+      </section>
     </>
   );
 }
